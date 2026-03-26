@@ -1,32 +1,37 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="d-flex flex-row m-5 ">
 
-    <div class="col 11">
-        <p class="fs-5 fw-bold">Asia Cars</p>
-    </div>  
+<div class="container">
 
-    <div>
-        <a class="btn btn-success"  type="button" href="{{ route('cars.create') }}">Create</a>
+    <div class="row mt-5 col-12 px-3 ">
+
+        <div class="col-6 ">
+            <p class="fs-4 fw-bold justify-content-start ">Asia Cars</p>
+        </div>
+
+        <div class="col-6 d-flex justify-content-end py-2">
+            <a class="btn btn-success"  type="button" href="{{ route('cars.create') }}">Create</a>
+        </div>
+        
+        
     </div>
-test
-</div>
-<div class="card d-flex flex-column px-5 overflow-auto "style="max-height:300px;">
-    <table class="table table-striped table-dark ">
-        <thead>
-            <tr class="text-center">
-                <th>Car Name</th>
-                <th>Car Model</th>
-                <th>Color</th>
-                <th>Mileage</th>
-                <th>Year Model</th>
-                <th>Amount</th>
-                <th>Fuel Type</th>
-                <th>Availability</th>
-                <th>Button</th>
-            </tr>
-        </thead>
+
+    <div class="card d-flex flex-column p-4 m-4 overflow-auto shadow shadow-md rounded-4 border border-3 " style="height: 500px;">
+        <table class="table table-striped table-dark" style="max-height:5vh;">
+            <thead>
+                <tr class="text-center">
+                    <th>Car Name</th>
+                    <th>Car Model</th>
+                    <th>Color</th>
+                    <th>Mileage</th>
+                    <th>Year Model</th>
+                    <th>Amount</th>
+                    <th>Fuel Type</th>
+                    <th>Availability</th>
+                    <th>Button</th>
+                </tr>
+            </thead>
             <tbody class="text-center">
                 @foreach ($cars as $car)
                     <tr>
@@ -45,7 +50,7 @@ test
                                     @csrf
                                     @method ('delete')
                                     <button 
-                                     class="btn border border-1 border-danger text-danger m-1" type="submit">Delete
+                                    class="btn border border-1 border-danger text-danger m-1" type="submit">Delete
                                     </button>                              
                                 </form>
                             </div>
@@ -53,9 +58,14 @@ test
                     </tr>
                 @endforeach        
             </tbody>
-
-    </table>
+        </table>
+    </div>
 </div>
+
+
+
+
+
 
 
 
