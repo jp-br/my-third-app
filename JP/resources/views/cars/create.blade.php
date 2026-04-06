@@ -51,17 +51,17 @@
                         <div class="row g-2">
                             <div class="form-floating mb-2 form-group col-md-6 ">                            
                                 <select name="fuel_type" class="form-select" id="formselectfueltype">
-                                    <option value="1">Gasoline</option>
-                                    <option value="2">Electric</option>
-                                    <option value="3">Diesel</option>
+                                    <option value="Gasoline">Gasoline</option>
+                                    <option value="Electric">Electric</option>
+                                    <option value="Diesel">Diesel</option>
                                 </select>
                                 <label for="CarMileage">Select Fuel Type</label>
                             </div>
 
                             <div class="form-floating mb-2 form-group col-md-6 ">                            
                                 <select name="availability" class="form-select" id="formselectfueltype">
-                                    <option value="1">Available</option>
-                                    <option value="2">Sold</option>
+                                    <option value="Available">Available</option>
+                                    <option value="Sold">Sold</option>
                                 </select>
                                 <label for="CarMileage">Select Fuel Type</label>
                             </div>
