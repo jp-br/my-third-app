@@ -63,7 +63,8 @@
         </table>
     </div>
 </div> --}}
-<div class="container mt-5">
+
+{{-- <div class="container mt-5">
     <div class="row">
         @foreach ($cars as $car)
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 ">
@@ -74,10 +75,9 @@
             </div>
         @endforeach
     </div>
-</div>
+</div> --}}
 
 <div class="container">
-
     <div class="row mt-5 col-12 px-3 ">
 
         <div class="col-6 ">
@@ -87,30 +87,27 @@
         <div class="col-6 d-flex justify-content-end py-2">
             <a class="btn btn-success"  type="button" href="{{ route('cars.create') }}">Create</a>
         </div>
-        
-        
     </div>
-        <div class="card-body">
-            <div class="card d-flex flex-column p-4 m-4 overflow-auto shadow shadow-md rounded-4 border border-3 " style="height: 500px;">
-                <table id="datatable" class="table table-striped datatable">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Car Name</th>
-                            <th>Car Model</th>
-                            <th>Color</th>
-                            <th>Mileage</th>
-                            <th>Year Model</th>
-                            <th>Amount</th>
-                            <th>Fuel Type</th>
-                            <th>Availability</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
 
-                </table>
-            </div>
+    <div class="card-body">
+        <div class="card d-flex flex-column p-4 m-4 overflow-auto shadow shadow-md rounded-4 border border-3 " style="height: 500px;">
+            <table id="datatable" class="table table-striped datatable">
+                <thead>
+                    <tr class="text-center">
+                        <th>Car Name</th>
+                        <th>Car Model</th>
+                        <th>Color</th>
+                        <th>Mileage</th>
+                        <th>Year Model</th>
+                        <th>Amount</th>
+                        <th>Fuel Type</th>
+                        <th>Availability</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
-
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 

@@ -11,5 +11,5 @@ Route::post('/cars/submit',[CarsController::class,'submit'])->name('cars.submit'
 Route::get('cars/edit/{id}',[CarsController::class,'edit'])->name('cars.edit');
 Route::put('cars/{id}',[CarsController::class,'update'])->name('cars.update');
 Route::delete('cars/{id}',[CarsController::class,'delete'])->name('cars.delete');
-Route::get('/cars/view',[CarsController::class,'view'])->name('cars.view');
+Route::get('/cars/show/{id}',[CarsController::class,'show'])->name('cars.show');
 

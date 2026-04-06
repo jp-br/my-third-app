@@ -29,7 +29,7 @@ class CarsController extends Controller
         ->addColumn('action', function ($row) {
             return '
                 <a href="'.route('cars.edit', $row->id).'" class="btn btn-sm btn-primary">Edit</a>
-                <a href="'.route('cars.view', $row->id).'" class="btn btn-sm btn-primary">View</a>  
+                <a href="'.route('cars.show', $row->id).'" class="btn btn-sm btn-primary">View</a>  
                 <a class="btn btn-sm btn-delete btn-danger" data-id="'.$row->id.'">Delete</a>
             ';
         })
@@ -140,6 +140,12 @@ class CarsController extends Controller
        $car->delete();
 
         return response()->json(['message' => 'Car deleted successfully']);
+    }
+
+    public function show($id){
+        $car = Cars::findOrFail($id); 
+        
+        return view('cars.show', compact('car'));
     }
 
 }
